@@ -46,5 +46,5 @@ Example body for POST/PUT:
 }
 ```
 ## GitHub Link
-github.com
+https://github.com/Ananyajsalian/syntecxhub-user-crud
 

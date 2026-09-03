@@ -1,4 +1,4 @@
-# Syntecxhub_Project1 - User Authentication System
+# Syntecxhub_Project1 - User CRUD API
 
 This is a REST API built during my Backend Development Internship at @SyntecXhub.
 
@@ -6,34 +6,45 @@ This is a REST API built during my Backend Development Internship at @SyntecXhub
 - Node.js
 - Express.js
 - MongoDB Atlas
-- bcrypt
-- jsonwebtoken (JWT)
 - Postman for testing
 
 ## Features
-- User Signup with password hashing using bcrypt
-- User Login with JWT token generation
-- Protected routes using JWT middleware
-- CRUD operations for Users
-- Error handling for invalid credentials and token expiry
+- Create a new user - POST
+- Get all users - GET
+- Get user by ID - GET
+- Update user details - PUT
+- Delete user - DELETE
+- Input validation with express-validator
+- Proper HTTP status codes and error handling
 
 ## API Endpoints
 
-### Auth
-`POST /api/signup` - Register new user
-`POST /api/login` - Login and get JWT token
-
-### User
-`GET /api/users` - Get all users [Protected]
-`GET /api/users/:id` - Get user by ID [Protected]
-`PUT /api/users/:id` - Update user [Protected]
-`DELETE /api/users/:id` - Delete user [Protected]
+`POST /api/users`      - Create new user
+`GET /api/users`       - Get all users
+`GET /api/users/:id`   - Get user by ID
+`PUT /api/users/:id`   - Update user by ID
+`DELETE /api/users/:id`- Delete user by ID
 
 ## How to Run
 1. Clone the repo
 2. `npm install`
-3. Create `.env` file with MONGO_URI and JWT_SECRET
+3. Create `.env` file in root with:
+
+MONGO_URI=your_mongodb_atlas_connection_string
+PORT=5000
+
 4. `npm start`
 
+## Testing
+Use Postman to test all endpoints.
+Example body for POST/PUT:
+```json
+{
+  "name": "Ananya",
+  "email": "ananya@test.com",
+  "age": 20
+}
+```
 ## GitHub Link
-https://github.com/Ananyajsalian/syntecxhub-user-crud
+github.com
+
